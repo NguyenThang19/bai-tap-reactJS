@@ -1,0 +1,23 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+$bg-color: rgb(16, 48, 44);
+
+.container-news{
+    background-color: $bg-color;
+    padding: 60px 40px;
+
+    .top-section{
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    .list-news{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // .swiper-slide{
+        //     width: calc(100% / 3) !important;
+        // }
+    }
+}

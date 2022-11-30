@@ -1,0 +1,138 @@
+$color-white: #fff;
+$color-brown: rgb(214, 157, 81);
+$color-red: #d83a3a;
+$bg-color: rgb(16, 48, 44);
+
+a {
+    text-decoration: none;
+
+}
+
+@mixin d_flex($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+.dishCard-items {
+    @include d_flex(center, none);
+    justify-self: center;
+    flex-direction: column;
+    width: 220px;
+    height: 343px;
+    position: relative;
+    background-color: $color-white;
+    box-shadow: #acacac 4px 4px 0px 0px;
+    padding: 8px;
+    margin-bottom: 40px;
+
+    .label-percent {
+        position: absolute;
+        right: 6%;
+        top: 4%;
+        padding: 2px 16px;
+        font-weight: 700;
+        text-align: center;
+        color: $color-white;
+        border-radius: 8px;
+        background-color: $color-red;
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .name-dish {
+        margin: 0 auto;
+        padding: 10px 0px;
+        font-weight: 800;
+        color: #000;
+        font-size: 24px;
+    }
+
+    .price-dish {
+        margin: 0 auto;
+        color: $color-red;
+        font-size: 18px;
+        font-weight: 800;
+
+        .old-price {
+            color: #969696;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: line-through;
+            padding-left: 10px;
+        }
+    }
+
+    .cover {
+        @include d_flex(center, center);
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        height: 220px;
+        width: calc(100% - 16px);
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgba(145, 140, 140, 0.6);
+        transition: all .3s linear;
+
+        .btn-views {
+            @include d_flex(center, center);
+            width: 52px;
+            height: 52px;
+            background-color: $color-white;
+            border: 1px solid $color-brown;
+            border-radius: 50%;
+
+            &:last-child {
+                margin-left: 12px;
+            }
+
+            &:hover svg {
+                fill: rgba(214, 157, 81, 1);
+            }
+        }
+    }
+
+    .quick-show {
+        transform: translateX(-100%);
+        transition: all .3s linear;
+
+    }
+
+    .quick-book {
+        transform: translateX(100%);
+        transition: all .3s linear;
+
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .cover {
+            animation: showCover .3s linear forwards;
+        }
+
+        .quick-show {
+            transform: translateX(0);
+        }
+
+        .quick-book {
+            transform: translateX(0);
+        }
+    }
+}
+
+@keyframes showCover {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,27 @@
+$color-white: #fff;
+$color-brown: rgb(214, 157, 81);
+$color-red: #d83a3a;
+$bg-color: rgb(16, 48, 44);
+
+
+@mixin d_flex($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;  
+}
+
+.container-special-dish-list{
+    padding: 60px 40px;
+    background-color: $bg-color;
+
+    .top-section{
+        justify-content: center;
+    }
+
+    .list-special-dish{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 10px;
+        margin-top: 30px;
+    }
+}

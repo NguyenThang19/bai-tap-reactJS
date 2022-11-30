@@ -1,0 +1,63 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+
+.show-more {
+    position: relative;
+    text-decoration: none;
+    color: $color-brown;
+    transition: all .5s linear;
+    padding: 0 60px;
+    font-size: 16px;
+    margin: auto;
+
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 0px;
+        height: 1px;
+        background-color: rgb(214, 156, 82);
+        opacity: 0;
+        transition: .5s;
+    }
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 1px;
+        background-color: rgb(214, 156, 82);
+        opacity: 1;
+        transition: .5s;
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s linear;
+        animation: ToLeft 0.5s linear forwards;
+
+    }
+
+    &:hover {
+        span {
+            animation: ToRight 0.5s linear forwards;
+        }
+
+        &:before {
+            width: 30px;
+            opacity: 1;
+        }
+
+        &:after {
+            width: 0px;
+            opacity: 0;
+        }
+    }
+}

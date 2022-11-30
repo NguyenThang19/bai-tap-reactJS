@@ -1,0 +1,30 @@
+$popular-color: #d69c52;
+
+@mixin button( $pd-y, $pd-x, $color, $fs) {
+    padding: $pd-y $pd-x;
+    background-color: $color;
+    font-size: $fs;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.btn-header{
+    @include button( 6px, 12px,$popular-color,14px);
+}
+
+.btn-banner{
+    @include button(12px, 32px, $popular-color, 16px)  ;
+    text-transform: uppercase;
+}
+
+.btn-cards, .btn-footer{
+    @include button(5px, 15px, $popular-color, 14px);
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    box-shadow: #000 2px 2px 0px 0px;
+    line-height: 32px;
+}
+

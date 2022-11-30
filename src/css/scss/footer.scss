@@ -1,0 +1,92 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+$color-bg : rgb(20, 59, 54);
+
+.footer-section{
+    background-color: $color-bg;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    padding: 50px 40px 80px;
+    color: $color-white;
+
+    ul, h3{
+        margin: 0 auto;
+    }
+
+    h3{
+        text-transform: uppercase;
+    }
+    ul{
+      list-style-type: none;  
+      
+      li{
+        margin: 20px auto 0px;
+        
+        &:hover{
+            cursor: pointer;
+            color: $color-brown;
+        }
+      }
+    }
+
+    .footer-about{
+        position: relative;
+        .logo{
+            margin: 0px auto 10px;
+            img{
+                max-width: 172px;
+                max-height: 80px;
+            }
+        }
+
+        .desc{
+            text-align: left;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .address{
+            margin: 20px auto 0px;
+        }
+        
+        .btn-footer{
+            top: 116%;
+        }
+    }
+
+    .group-socials-payments{
+        margin-left: 20px;
+        h3{
+            margin: 0 auto 20px;
+        }
+
+        a{
+            display: inline-block;
+            margin: 0 auto 20px;
+            padding-right: 20px;
+            max-width: 32px;
+            max-height: 32px;
+            
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .socials{
+            .items{
+                &:hover img{
+                    border: 1px solid #d69c52;
+                }
+            }
+        }
+
+        .payment{
+            .items{
+                max-width: 52px;
+            }
+        }
+    }
+
+}

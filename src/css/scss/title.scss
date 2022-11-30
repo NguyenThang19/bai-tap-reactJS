@@ -1,0 +1,77 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+
+// Import Font Google
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+// Animation transform Title of Page
+.trans-title{
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+
+.titleBanner{
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.titleFeature, .titleMenu, .titleSpecial, .titleNews{
+    padding: 10px 10px 0;
+}
+
+@mixin sub-title ($color, $fs, $pd-y, $pd-x) {
+    color: $color;
+    font-size: $fs;
+    letter-spacing: 2px;
+    line-height: 20px;
+    padding: $pd-y $pd-x;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    // justify-content:center;
+    margin:  5px auto 30px;
+
+    span {
+        max-width: 45px;
+        max-height: 30px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .title {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        font-size: 48px;
+        font-style: italic;
+        color: $color-white;
+        font-weight: 500;
+
+        &:hover {
+            color: $color-brown;
+        }
+    }
+
+    .icon-right {
+        transform: rotateY(180deg);
+    }
+}
+.sub-title-banner {
+    @include sub-title($color-white, 20px, 15px, 0);
+}
+
+.sub-title-about {
+    @include sub-title($color-brown, 20px, 0, 0);
+    font-style: italic;
+    margin: 0 auto 10px
+}
+

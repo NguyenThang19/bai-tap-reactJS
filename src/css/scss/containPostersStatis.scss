@@ -1,0 +1,51 @@
+$bg-color: rgb(18, 53, 49);
+
+@mixin d-flex($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+.group-post-statis {
+    background-color: $bg-color;
+    padding: 60px 40px;
+
+    .container-posters {
+        @include d-flex(center, space-around);
+        margin: 0 auto 20px;
+    }
+
+    .container-statistical {
+        @include d-flex(center, space-around);
+        margin: 0 auto 20px;
+
+        .statis-items {
+            @include d-flex(center, center);
+            width: calc(100% / 4);
+            border-right: 1px solid #797979;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            .info-items {
+                margin-left: 20px;
+
+                p{
+                    margin: 0 auto;
+                    color: #fff;
+                }
+
+                .numb {
+                    font-size: 48px;
+                    font-weight: 700;
+                }
+
+                .title{
+                    font-size: 18px;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}

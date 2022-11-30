@@ -1,0 +1,88 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+$bg-color: rgb(16, 48, 44);
+
+
+.hide-side-bar-section{
+    visibility: hidden;
+}
+
+.hide-side-bar-menu{
+    animation: hideSideBar 0.5s linear forwards;
+}
+
+.show-side-bar-menu{
+    animation: showSideBar 0.5s linear forwards;
+}
+
+@keyframes showSideBar {
+    from{
+        left: -40%;
+    }
+
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes hideSideBar {
+    from{
+        left: 0;
+        opacity: 1;
+    }
+
+    to{
+        left: -40%;
+        opacity: 0;
+    }
+}
+
+.side-bar-section{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    transition: all 0.5s linear;
+
+    .menu-side-bar{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 80%;
+        height: 100%;
+        background-color: $bg-color;
+        transition: all 0.5s linear;
+
+
+        .logo{
+            padding: 20px;
+            border-bottom: $color-white 1px solid  ;
+            img{
+                display: block;
+                width: 72%;
+                object-fit: contain;
+                margin: auto;
+            }
+        }
+
+        .nav{
+            list-style-type: none;
+            padding: 0;
+            .nav-items{
+                a{
+                    display: block;
+                    padding: 16px 24px 16px 20px;
+                    color: $color-white;
+                    font-weight: bold;
+                    &:hover{
+                        background-color: #d69c52;
+                    }
+                }
+            }
+        }
+    }
+}
+

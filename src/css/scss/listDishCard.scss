@@ -1,0 +1,9 @@
+.list-dish-card {
+    display: grid;
+    grid-template-columns: repeat(5, calc(100% /5));
+    margin: 0 auto;
+}
+
+.none-active {
+    display: none;
+}

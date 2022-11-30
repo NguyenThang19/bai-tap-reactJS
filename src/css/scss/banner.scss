@@ -1,0 +1,17 @@
+@mixin d-flex($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+.banner-section{
+    @include d-flex(center, center);
+    width: 100%;
+    min-height: 653px;
+    flex-direction: column;
+    // padding-top: 85px;
+    background-image: url('../image/image-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

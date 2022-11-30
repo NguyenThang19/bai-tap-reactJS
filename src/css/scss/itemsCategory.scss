@@ -1,0 +1,30 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+$bg-color: rgb(16, 48, 44);
+
+.category-items{
+    color: $color-white;
+    border: 1px solid $color-white;
+    border-radius: 8px;
+    padding: 15px 10px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    margin: {
+        top: 0px;
+        right: 14px;
+        bottom: 0px;
+        left: 0px;
+    } ;
+
+    &:last-child{
+        margin: {
+            right: 0px;
+        }
+    }
+
+    &:hover{
+        background-color: $color-brown;
+        cursor: pointer;
+    }
+}

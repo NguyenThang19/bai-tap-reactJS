@@ -1,0 +1,17 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+$bg-color: rgb(16, 48, 44);
+
+.featured-category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    padding: 60px 40px;
+    background-color: $bg-color;
+    
+    .body-category{
+        display: flex;
+        
+    }
+}

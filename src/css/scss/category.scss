@@ -1,0 +1,30 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+$bg-color: rgb(17, 77, 70);
+
+@mixin cusList {
+    list-style-type: none; 
+    margin: 0;
+}
+
+@mixin d-flex($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+.container-category{
+    background-color: $bg-color;
+    padding: 60px 40px;
+
+    .top-section{
+        @include d-flex(center, center);
+        margin:  0px auto;
+    }
+
+    .category-menu{
+        @include cusList;
+        @include d-flex(center, center);
+        margin: 30px auto;
+        padding: 0;
+    }
+}

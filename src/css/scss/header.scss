@@ -1,0 +1,81 @@
+$bg-color: #143b36;
+$popular-color: #d69c52;
+$txt-color: #fff;
+
+@mixin d-flex($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin list {
+    list-style-type: none;
+}
+
+@mixin linkItems {
+    text-decoration: none
+}
+
+@mixin propsTxt($color, $fs, $fw){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+
+.header {
+    @include d-flex(center, space-evenly);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    background-color: rgb(20, 59, 54, 0.6) ;
+    padding: 10px 40px;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0,0.3) 2px 2px 2px 2px;
+
+    .btn-toggle-side-bar{
+        display: none;
+
+        span{
+            border-radius: 4px;
+            display: block;
+            width: 32px;
+            height: 6px;
+            margin-bottom: 4px;
+            background-color: rgb(134, 133, 133);
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .logo {
+        max-height: 65px;
+
+        img {
+            max-height: 65px;
+            object-fit: contain;
+        }
+    }
+
+    .nav {
+        @include list;
+        @include d-flex(center, space-around);
+
+        .nav-items {
+            @include d-flex(center, center);
+            padding-right:24px;
+
+            a {
+                @include linkItems;
+                @include propsTxt(#fff, 16px, 700);
+            }
+
+            &:hover a {
+                color: $popular-color;
+            }
+        }
+    }
+}

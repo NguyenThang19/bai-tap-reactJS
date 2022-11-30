@@ -1,0 +1,66 @@
+$color-white: #fff;
+$color-brown: #d69c52;
+$color-bg : rgb(20, 59, 54);
+
+@mixin d-flex($align-items, $justify-content){
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+.about-section {
+    @include d-flex(flex-start, center);
+    background-color: $color-bg;
+    padding: 40px;
+
+    .items-left {
+        width: 50%;
+        padding-right: 30px;
+        .title {
+            font-weight: 400;
+        }
+
+        .desc {
+            padding: 10px 0;
+            color: #fff;
+            margin: auto;
+        }
+    }
+
+    .items-right{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        overflow: hidden;
+
+        .banner-about{
+            max-width: 100% ;
+            object-fit: contain;
+            transition: all 0.3s linear;
+        }
+
+        &:hover .banner-about{
+            transform: scale(1.05);
+        }
+    }
+}
+
+@keyframes ToRight {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 35px;
+    }
+}
+
+@keyframes ToLeft {
+    from {
+        left: 35px;
+    }
+
+    to {
+        left: 0;
+    }
+}
