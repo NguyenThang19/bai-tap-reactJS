@@ -10,12 +10,24 @@
     p {
         margin: 0;
     }
+
+    .dishCard-items{
+        .cover{
+            height: 220px;
+        }
+    }
 }
 
 
 @media only screen and (min-width: 1307px) and (max-width: 1345px) {
     .desc-items-dish {
         width: 240px;
+    }
+
+    .dishCard-items{
+        .cover{
+            height: 200px;
+        }
     }
 }
 
@@ -28,11 +40,17 @@
 
     .dishCard-items {
         width: 200px;
+
+        .cover{
+            height: 200px;
+        }
     }
 
     .poster-items {
         width: 255px;
     }
+
+
 }
 
 @media only screen and (max-width: 1239px) {
@@ -195,7 +213,7 @@
         height: 300px;
 
         .cover {
-            height: 200px;
+            height: 160px;
         }
     }
 
@@ -441,6 +459,12 @@
         display: grid;
         grid-template-columns:repeat(1, 1fr);
         margin: 0 auto;
+        
+        .dishCard-items{
+            .cover{
+                height: 200px;
+            }
+        }
     }
 
     .list-special-dish{
